@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remove-project name="platform/external/libxml2" />
+    <!-- libxml2 is required by the RILD daemon -->
+    <project path="external/libxml2" name="CyanogenMod/android_external_libxml2" remote="github" groups="pdk-cw-fs" revision="cm-12.1"/>
+    <!-- Add new exfat support for fuse -->
+    <project path="external/exfat" name="CyanogenMod/android_external_exfat" remote="github" revision="cm-12.1" />
+    <!-- Add new fuse -->
+    <project path="external/fuse" name="CyanogenMod/android_external_fuse" remote="github" revision="cm-12.1"/>
+    <project name="CyanogenMod/android_device_qcom_common" path="device/qcom/common" remote="github" revision="cm-12.1" />
+    <project name="CyanogenMod/android_hardware_qcom_fm" path="hardware/qcom/fm" remote="github" revision="cm-12.1" />
+    <!-- Dual sim support -->
+    <remove-project name="frameworks/opt/telephony"/>
+    <project name="F-AOSP/platform_frameworks_opt_telephony" path="frameworks/opt/telephony" remote="github" revision="lollipop-5.1"/>
+    <project name="F-AOSP/platform_frameworks_opt_net_ims" path="frameworks/opt/net/ims" remote="github" revision="lollipop-5.1"/>
+    <remove-project "packages/services/Telephony"/>
+    <project name="F-AOSP/platform_packages_services_Telephony" path="packages/services/Telephony" remote="github" revision="lollipop-5.1"/>
+    <remove-project "frameworks/base"/>
+    <project name="F-AOSP/platform_frameworks_base" path="frameworks/base" remote="github" revision="lollipop-5.1"/>
+</manifest>
+
